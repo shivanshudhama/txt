@@ -296,7 +296,7 @@ async def account_login(bot: Client, m: Message):
     try:
         for i in range(arg, len(links)):    
             url = links[i][1].replace("d1d34p8vz63oiq", "d3nzo6itypaz07").replace("mpd", "m3u8").strip()
-            name = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@","").replace("*","").replace(".","").replace("b'", ":").replace("'", "").replace(" : ", " ").replace(" :  ", " ").strip()
+            name = links[i][0].replace("\t", "").replace(":", "").replace("/", "").replace("+", "").replace("#", "").replace("|", "").replace("@","").replace("*","").replace(".","").replace("'", "").replace(" : ", " ").replace(" :  ", " ").strip()
             
             Show = f"**Downloading:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`\n\n"
             prog = await m.reply_text(Show)
