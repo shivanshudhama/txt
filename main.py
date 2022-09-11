@@ -1,5 +1,5 @@
 #  MIT License
-#
+#  .replace("b'", ":")
 #  Copyright (c) 2019-present Dan <https://github.com/delivrance>
 #
 #  Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -547,8 +547,8 @@ async def account_login(bot: Client, m: Message):
                 
             Show = f"**Downloading:-**\n\n**Name :-** `{name}`\n\n**Url :-** `{z}`"
             prog = await m.reply_text(Show)
-            cc = f"**{count}) Title :** {name}\n\n**Batch :** {raw_text8}\n**𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱 𝗕𝘆 :** {raw_te}\n**𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : 𝗕𝗹𝗮𝗰𝗸𝗢𝘂𝗧 (•̪●)=︻╦̵̵̿╤── **\n**𝗣𝗹𝘇 𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲 : https://www.youtube.com/channel/UC7udfRGdD_QoCg-OnSooGAA**"
-
+            cc = f"**{count}) Title :** {name}\n\n**Batch :** {raw_text8}\n**𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗲𝗱 𝗕𝘆 :** {raw_te}\n**𝗕𝗼𝘁 𝗢𝘄𝗻𝗲𝗿 : 𝗕𝗹𝗮𝗰𝗸𝗢𝘂𝗧 (•̪●)=︻╦̵̵̿╤── **"
+        #\n**𝗣𝗹𝘇 𝗦𝘂𝗯𝘀𝗰𝗿𝗶𝗯𝗲 : https://www.youtube.com/channel/UC7udfRGdD_QoCg-OnSooGAA**
             cmd = f'yt-dlp -o "{name}.mp4" --cookies {cook} "{z}"'
             try:
                 download_cmd = f"{cmd} -R 25 --fragment-retries 25 --external-downloader aria2c --downloader-args 'aria2c: -x 16 -j 32'"
